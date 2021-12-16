@@ -1,0 +1,58 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "mathlang",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#tex"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+			{
+				"name": "keyword.control",
+				"match": "\\b(命题|方程)\\b"
+			},
+			{
+				"name": "keyword.other",
+				"match": "\\b(设|则|证明|闭)\\b"
+			},
+			{
+				"name": "keyword.other",
+				"match": "\\b(未知数|方程体|解|闭)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.mathlang",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.mathlang",
+					"match": "\\\\."
+				},
+				{
+					"name": "constant."
+				}
+			]
+		},
+		"tex": {
+			"name": "tex.quoted.double.mathlang",
+			"begin": "\\$",
+			"end": "\\$",
+			"patterns": [
+				{
+					"name": "constant.character.escape.mathlang",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.mlang"
+}

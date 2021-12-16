@@ -1,0 +1,25 @@
+{
+    "name": "vscode-mathlang",
+    "displayName": "vscode-mathlang",
+    "description": "vscode extension for mathlang",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "mathlang",
+            "aliases": ["mathlang", "mathlang"],
+            "extensions": [".mlang"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "mathlang",
+            "scopeName": "source.mlang",
+            "path": "./syntaxes/mathlang.tmLanguage.json"
+        }]
+    }
+}
